@@ -1,4 +1,4 @@
-const toNormalized = (hexa: string) => Number((parseInt(hexa, 16) / 255).toFixed(2))
+const toNormalized = (hexa: string) => parseInt(hexa, 16) / 255
 
 export const hexaToNormalized = (hexa: string) => ({
   r: toNormalized(hexa.substring(1, 3)),

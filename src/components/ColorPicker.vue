@@ -17,8 +17,7 @@ const emit = defineEmits(['colorChange'])
 const { normalized, rgb, hexa, fromNormalized, fromRGB, fromHexa } = useColorConvertor({
   color,
   onColorChange: (r, g, b) => {
-    console.log('emit colorChange')
-    emit('colorChange', r, g, b)
+    emit('colorChange', { r, g, b })
   },
 })
 </script>
@@ -83,7 +82,7 @@ const { normalized, rgb, hexa, fromNormalized, fromRGB, fromHexa } = useColorCon
       </InputWrapper>
       <InputWrapper label="GLSL" :clipboard="normalized.text">
         <input
-          class="w-8 text-end [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
+          class="w-20 text-end [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
           type="number"
           step="0.01"
           min="0"
@@ -99,7 +98,7 @@ const { normalized, rgb, hexa, fromNormalized, fromRGB, fromHexa } = useColorCon
           :value="normalized.r"
         />
         <input
-          class="w-8 text-end [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
+          class="w-20 text-end [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
           type="number"
           step="0.01"
           min="0"
@@ -115,7 +114,7 @@ const { normalized, rgb, hexa, fromNormalized, fromRGB, fromHexa } = useColorCon
           :value="normalized.g"
         />
         <input
-          class="w-8 text-end [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
+          class="w-20 text-end [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
           type="number"
           step="0.01"
           min="0"
