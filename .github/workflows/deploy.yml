@@ -24,7 +24,7 @@ jobs:
         run: pnpm install
 
       - name: build
-        run: pnpm run build
+        run: pnpm run build --base=https://app.pierrelespingal.xyz/color-picker/
 
       - uses: garygrossgarten/github-action-scp@release
         with:
